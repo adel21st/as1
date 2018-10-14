@@ -1,0 +1,25 @@
+          <% if user_signed_in? %>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong><%= current_user.name %></strong>
+                </a>
+                <a class="button is-light">
+                  <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <% else # user not signed it %>
+                    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+            <strong><%=  link_to 'signin', signin_path, class: "button is-primary" %></strong>
+            <%= link_to 'signup', signup_path, class: "button is-light" %>
+        </div>
+      </div>
+    </div>
+          <% end # if user is signed it %>
+
