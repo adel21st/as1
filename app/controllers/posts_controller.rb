@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 		@posts = Post.search(params[:search])
 	end
 
+
 	private
 
 	def city_params
