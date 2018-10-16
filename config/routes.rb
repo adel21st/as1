@@ -13,8 +13,6 @@ Rails.application.routes.draw do
 	resources :posts
 	resources :cities
 	
-	get :search, controller: :posts
+	get :search, controller: :main
    
-
-
 end
