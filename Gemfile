@@ -24,6 +24,9 @@ gem 'rake', '~> 12.3', '>= 12.3.1'
 gem 'sassc', '~> 2.0'
 gem 'font-awesome-sass', '~> 5.3.1'
 gem 'ransack', '~> 2.0', '>= 2.0.1'
+gem 'actionpack'
+gem 'simple_form'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
