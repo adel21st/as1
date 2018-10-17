@@ -1,12 +1,5 @@
 
-<div class="columns">
-	<div class="column is-half is-offset-one-quarter">
-		<h4>Search by City</h4>
 		<%= form_tag(posts_path, method: :get) do  %>
 		<%= text_field_tag :search, params[:search], id: 'search', :placeholder => "Ville ou code postal", data:{ behavior: "autocomplete"} %>
-		<%= submit_tag 'Search' %>
+		<%= submit_tag 'Search'%>
 		<% end %>
-
-	</div>
-</div>
-

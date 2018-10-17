@@ -1,4 +1,4 @@
-<%= render 'posts/modal' %>
+<%= render 'modal' %>
 
 <% @posts.each do |post| %>
 <div class="box" id="showModal">
@@ -12,7 +12,7 @@
 		<div class="media-content">
 			<div class="content">
 				<p>
-					<strong><%= post.title %></strong> <small>@johnsmith</small> <small>31m</small>
+					<strong><%= post.title %></strong> <small>post_id: <%= post.city_id %></small> || <small>user_id: <%= post.user_id %></small>
 					<br>
 					<%= post.content %>
 				</p>
