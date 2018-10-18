@@ -8,13 +8,14 @@ document.addEventListener("turbolinks:load", function () {
 		},
 		categories : [
 		{
-			listLocation: "nom_reel",
+			listLocation: "nom_reel"
 		},
 		{
 			listLocation: "code_postal",
 		}
 		],
 		list: {
+
 			onChooseEvent: function() {
 				var url = $input.getSelectedItemData().url
 				//$input.val("")

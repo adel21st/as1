@@ -14,7 +14,7 @@ end
   def create
    @post = current_user.posts.new(post_params)
    @city = City.find_by(params[:city_id])
-   if @post.save(post_params) && (@city.posts << @post)
+   if @post.save(post_params) 
     flash[:notice] = "Successfully created post!"
     redirect_to post_path(@post)
   else
@@ -24,7 +24,7 @@ end
 end
 
 def find_post
-   @post = Post.find_by(params[:id])
+  # @post = Post.find_by(params[:city_id])
 end
 
 def show
@@ -56,7 +56,7 @@ end
 private
 
 def post_params
-  params.require(:post).permit(:title, :content, :city_id, :user_id, :id)
+  params.require(:post).permit(:title, :content, :city_id)
 end
 
 end

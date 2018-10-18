@@ -4,15 +4,18 @@ class Post < ApplicationRecord
 
 	def self.search(search)
 		if search
-			city = City.where(nom_simple: search).or(City.where(code_postal: search))
-			if city.exists?
-				Post.where(city_id: city)
-			else 
-				Post.limit(5)
-			end
-		else
-			Post.limit(5)
-		end		
-	end
+			city = City.where(nom_reel: search).or(City.where(code_postal: search))
+			if city.empty?
+				Post.limit(10)
+			elsif city.exists? 
+				city = Post.where(city_id: city)
+		else 
+			Post.limit(10)
+		end
+	else
+		Post.limit(10)
+	end		
+end
+
 
 end
