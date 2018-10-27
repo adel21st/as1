@@ -14,5 +14,5 @@ Rails.application.routes.draw do
 	resources :cities
 	
 	get :search, controller: :main
-   
+
 end
