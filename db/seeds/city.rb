@@ -1,4 +1,4 @@
-=begin
+#=begin
 require 'csv'
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'villes_france.csv'))
@@ -14,7 +14,7 @@ csv.each  do  |row|
 	t.nom_reel = row[5]
 	t.code_postal = row[6]
 	t.save
-	if (City.last.id == 10 )
+	if (City.last.id == 100 )
 		then break
 	else puts "continu"
 	end
@@ -22,4 +22,4 @@ csv.each  do  |row|
 end
 
 puts "There are now #{City.count} rows in the transactions table"
-=end
+#=end
